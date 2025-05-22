@@ -1,0 +1,24 @@
+const student = {
+  name: "Mohith",
+  grade: 7,
+  subjects: ["FSD", "Cloud Computing", "ML"],
+  displayInfo: function() {
+    console.log("Student Name:", this.name);
+    console.log("Grade:", this.grade);
+    console.log("Subjects:", this.subjects.join(", "));
+  }
+};
+
+student.displayInfo();
+
+const PassingGrade = 10;
+student.isPassed = (student.grade >= PassingGrade);
+
+console.log(student.isPassed);
+
+console.log("Student object details:");
+for (let key in student) {
+  if (typeof student[key] !== 'function') {
+    console.log(`${key}: ${student[key]}`);
+  }
+}
